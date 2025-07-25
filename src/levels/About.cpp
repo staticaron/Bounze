@@ -56,7 +56,15 @@ void openUrlAllPlatforms( std::string url )
 	command += url;
 	system( command.c_str() );
 #else
-#error "Unsupported OS"
+#ifdef __APPLE__
+    #include <TargetConditionals.h>
+    #if TARGET_OS_MAC
+        // macOS-specific code
+        std::string command = "open -a Safari ";
+        command += url;
+        system( command.c_str() );
+    #endif
+#endif
 #endif
 }
 

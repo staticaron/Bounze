@@ -43,6 +43,9 @@ target_compile_definitions("${PROJECT_NAME}" PUBLIC RESOURCE_PATH="./resources/"
 
 target_compile_definitions("${PROJECT_NAME}" PRIVATE SDL_MAIN_HANDLED)
 
+# Suppress the -Wc++11-narrowing warning
+target_compile_options("${PROJECT_NAME}" PRIVATE -Wno-c++11-narrowing)
+
 target_include_directories("${PROJECT_NAME}" PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
 target_include_directories("${PROJECT_NAME}" PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/vendor/SDL_mixer/include")
 target_include_directories("${PROJECT_NAME}" PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/vendor/SDL_ttf")

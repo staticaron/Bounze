@@ -24,5 +24,11 @@
 2. Enter the folder `cd build`
 3. Run the cmake command `cmake ..`
 4. Make the build file `make`
+
+### macOS
+1. Create a folder `/build`
+2. Enter the folder `cd build`
+3. Run the cmake command `cmake ..`
+4. Make the build file `make`
    
 **NOTE** : Copy the `/resources` folder in same directory as the `.exe` file. 
